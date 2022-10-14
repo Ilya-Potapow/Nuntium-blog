@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="main__body">
+
+    <!-- Header -->
+    <header>
+
+        <!-- Navbar -->
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+
+                    <!-- Left section -->
+                    <div class="navbar">
+                        <div class="logo"> <a href="./home-logged.html" title="Home page"> <img src="./img/header-logo.svg" alt="Nuntium"> </a> </div>
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a href="./home-logged.html" class="menu__item-link" data-scroll>Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./tags.html" class="menu__item-link" data-scroll>Tags</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./about.html" class="menu__item-link" data-scroll>About</a>
+                            </li>
+                            <li class="menu__item menu__item--hidden">
+                                <form class="nav-form">
+                                    <input type="text" placeholder="Search">
+                                    <button type="submit">
+                                        <img src="./img/header-search.svg" alt="">
+                                    </button>
+                                </form>
+
+                                <ul class="usermenu-drop">
+                                    <li class="usermenu-item">
+                                        <img src="./img/profile/profile-picture.png" class="user-avatar">
+
+                                        <ul class="dropdawn-menu dropdawn-menu--user">
+
+                                            <li class="dropdawn-item">
+                                                <a class="dropdawn-link" href="#!" title="Profile">
+                                                    <img src="./img/profile/user-dropdawn_ico/user.svg" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="dropdawn-item">
+                                                <a class="dropdawn-link" href="./dashboard.html" title="Dashboard">
+                                                    <img src="./img/profile/user-dropdawn_ico/dashboard.svg" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="dropdawn-item">
+                                                <a class="dropdawn-link" href="./dashboard.html" title="Write a post">
+                                                    <img src="./img/profile/user-dropdawn_ico/write-post.svg" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="dropdawn-item">
+                                                <a class="dropdawn-link" href="./dashboard.html" title="Settings">
+                                                    <img src="./img/profile/user-dropdawn_ico/settings.svg" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="dropdawn-item">
+                                                <a class="dropdawn-link" href="./dashboard.html" title="Help">
+                                                    <img src="./img/profile/user-dropdawn_ico/help.svg" alt="">
+                                                </a>
+                                            </li>
+                                            <li class="dropdawn-item">
+                                                <a class="dropdawn-link" href="./index.html" title="Sign out">
+                                                    <img src="./img/profile/user-dropdawn_ico/logout.svg" alt="">
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right section -->
+                    <div class="right-section">
+                        <form class="nav-form">
+                            <input type="text" placeholder="Search">
+                            <button type="submit">
+                                <img src="./img/header-search.svg" alt="">
+                            </button>
+                        </form>
+
+                        <ul class="notification-drop">
+                            <li class="notification-item">
+                                <img src="./img/profile/notification.svg" class="notification-bell" aria-hidden="true">
+                                <span class="btn__badge pulse-button "></span>
+                                </img>
+
+                                <ul class="dropdawn-menu dropdawn-menu--notification">
+                                    <li class="dropdawn-item">
+                                        <img class="dropdawn-image" src="./img/profile/new-message.svg" alt="">
+                                        <a class="dropdawn-link" href="./profile.html">New message (1)
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="usermenu-drop">
+                            <li class="usermenu-item">
+                                <img src="./img/profile/profile-picture.png" class="user-avatar">
+
+                                <ul class="dropdawn-menu dropdawn-menu--user">
+                                    <li class="dropdawn-item dropdawn-item--user">
+                                        <a class="dropdawn-link dropdawn-link--username" href="./profile.html">Arthur Black</a>
+                                        @arthurblack
+                                    </li>
+                                    <li class="dropdawn-item">
+                                        <a class="dropdawn-link" href="./dashboard.html">Dashboard</a>
+                                    </li>
+                                    <li class="dropdawn-item">
+                                        <a class="dropdawn-link" href="./dashboard.html">Write a Post</a>
+                                    </li>
+                                    <li class="dropdawn-item">
+                                        <a class="dropdawn-link" href="./dashboard.html">Settings</a>
+                                    </li>
+                                    <li class="dropdawn-item">
+                                        <a class="dropdawn-link" href="./dashboard.html">Help</a>
+                                    </li>
+                                    <li class="dropdawn-item">
+                                        <a class="dropdawn-link" href="./index.html">Sign out</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <div class="burger">
+                            <span></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <!-- Main Page -->
+    <main>
+        <!-- User info -->
+        <div class="container">
+            <section class="user-info">
+                <img class="user-info__avatar" src="./img/profile/profile-avatar.png" alt="Profile picture">
+                <div class="user-info__content">
+                    <h1 class="user-info__title">Arthur Black</h1>
+                    <span class="user-info__nickname">@arthurblack</span>
+                    <p class="user-info__text">
+                        Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam
+                        tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id mollit commodo
+                        ipsum deserunt quis.
+                    </p>
+                    <div class="user-info__social">
+                        <a class="user-info__link" title="Author site" href="#!">arthurblack.com</a>
+                        <div class="user-info__social-wrapper">
+                            <a class="user-info__social-link" href="#!" title="Linkedin">
+                                <img class="user-info__social-image" src="./img/profile/social/linkedin1.svg"
+                                    alt="linkedin">
+                            </a>
+                            <a class="user-info__social-link" href="#!" title="Instagram">
+                                <img class="user-info__social-image" src="./img/profile/social/instagram1.svg"
+                                    alt="Instagram">
+                            </a>
+                            <a class="user-info__social-link" href="#!" title="Twitter">
+                                <img class="user-info__social-image" src="./img/profile/social/twitter1.svg"
+                                    alt="Twitter">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Article prewiev -->
+        <div class="container">
+            <section class="article-preview article-preview--profile">
+                <div class="article-content article-content--profile">
+                    <a class="article-topic" href="#!">INTERIOR</a>
+                    <a class="article-link" href="./article.html" title="To article">
+                        <h2 class="article-title">Laborum Ullamco Sunt id ut Sunt</h2>
+                    </a>
+                    <div class="tag-container">
+                        <a class="date" href="#!">May 7, 2019 (10 mins read)</a>
+                    </div>
+                    <p class="article-text">
+                        Proident aliquip velit qui commodo officia qui consectetur dolor ullamco aliquip elit
+                        incididunt. Ea minim ex consectetur excepteur. Ex laborum nostrud mollit sint consectetur Lorem
+                        amet aliqua do enim. Commodo duis dolor anim excepteur. In aliquip mollit nulla consequat velit
+                        magna.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Recent posts -->
+        <div class="container">
+            <section class="recent-posts recent-posts--profile">
+                <div class="preview">
+
+                    <!-- Item -->
+                    <div class="preview__item">
+                        <a class="preview__image" href="#!to-article">
+                            <img src="./img/recent-posts/prewiev-article1.png" alt="">
+                        </a>
+                        <div class="preview__content">
+                            <a class="preview__topic" href="#!to-topic">NATURE</a>
+                            <a class="preview__link" href="#!to-article">
+                                <h2 class="preview__title">Tempor deserunt Sunt Qui</h2>
+                            </a>
+                            <div class="tag-container">
+                                <a class="author" href="#!to-author">Connie Robertson</a>
+                                <a class="date" href="#!to-date-filter">November 3, 2012</a>
+                            </div>
+                            <p class="preview__text">
+                                Ea qui dolor aute cupidatat ad pariatur proident. Mollit nulla tempor aute
+                                reprehenderit ut dolore mollit nisi consequat excepteur ex officia pariatur irure.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="preview__item">
+                        <a class="preview__image" href="#!to-article">
+                            <img src="./img/recent-posts/prewiev-article2.png" alt="">
+                        </a>
+                        <div class="preview__content">
+                            <a class="preview__topic" href="#!to-topic">PLANTS</a>
+                            <a class="preview__link" href="#!to-article">
+                                <h2 class="preview__title">Occaecat Anim eu Qui</h2>
+                            </a>
+                            <div class="tag-container">
+                                <a class="author" href="#!to-author">Eleanor Williamson</a>
+                                <a class="date" href="#!to-date-filter">September 28, 2014</a>
+                            </div>
+                            <p class="preview__text">
+                                Qui ipsum consectetur ad incididunt et aliquip exercitation laboris nisi reprehenderit.
+                                Et excepteur commodo esse enim ea aliqua officia reprehenderit.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="preview__item">
+                        <a class="preview__image" href="#!to-article">
+                            <img src="./img/recent-posts/prewiev-article3.png" alt="">
+                        </a>
+                        <div class="preview__content">
+                            <a class="preview__topic" href="#!to-topic">FOOD</a>
+                            <a class="preview__link" href="#!to-article">
+                                <h2 class="preview__title">Fugiat Incididunt Voluptate Consequat</h2>
+                            </a>
+                            <div class="tag-container">
+                                <a class="author" href="#!to-author">Bessie Watson</a>
+                                <a class="date" href="#!to-date-filter">June 13, 2012</a>
+                            </div>
+                            <p class="preview__text">
+                                Mollit ea culpa ipsum pariatur eiusmod. Irure et.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="preview__item">
+                        <a class="preview__image" href="#!to-article">
+                            <img src="./img/recent-posts/prewiev-article4.png" alt="">
+                        </a>
+                        <div class="preview__content">
+                            <a class="preview__topic" href="#!to-topic">COLORFUL</a>
+                            <a class="preview__link" href="#!to-article">
+                                <h2 class="preview__title">Occaecat Anim eu Qui</h2>
+                            </a>
+                            <div class="tag-container">
+                                <a class="author" href="#!to-author">Ted Simmmons</a>
+                                <a class="date" href="#!to-date-filter">June 21, 2015</a>
+                            </div>
+                            <p class="preview__text">
+                                Amet ipsum occaecat aliqua aute nisi laboris nostrud culpa est do. Aliqua esse velit in
+                                excepteur esse qui voluptate laboris adipisicing qui irure elit amet excepteur.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <h2 class="footer-title">Want to connect?</h2>
+                <p class="footer-text">Laboris consectetur sunt nulla eiusmod voluptate eiusmod dolor nisi qui..</p>
+                <div class="footer-social">
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/twitter.svg" alt="twitter">
+                    </a>
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/inst.svg" alt="instagram">
+                    </a>
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/in.svg" alt="linkedin">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+</body>
+<script src="./js/libs/jquery-3.6.0(lib).min.js"></script>
+<script src="./js/home-logged.js"></script>
+
+</html>

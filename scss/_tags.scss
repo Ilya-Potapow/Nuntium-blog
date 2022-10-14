@@ -1,0 +1,117 @@
+.tags-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 100px;
+}
+
+.tags-form {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    position: relative;
+}
+
+.tags-input {
+    width: 100%;
+
+    border: 1px solid #00000096;
+    border-radius: 25px;
+    overflow: hidden;
+
+    position: relative;
+    z-index: 5;
+
+    transition: all .1s ease-in-out;
+
+    &::placeholder {
+        font-size: 16px;
+        line-height: 22px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover {
+        box-shadow: 1px 2px 5px -2px #000000ad;
+    }
+
+}
+
+.tags-btn {
+    position: absolute;
+    right: 25px;
+    z-index: 5;
+
+    background-color: transparent;
+    border-radius: 50%;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(1);
+    }
+}
+
+.tagify {
+    padding: 0px 50px 0px 20px;
+    --tag-pad: 10px;
+    --tag-inset-shadow-size: 2em;
+    --tag-border-radius: 50px;
+    --tag-bg: #F5F5F5;
+
+    &:hover {
+        background-color: rgba(218, 218, 218, 0.15);
+    }
+}
+
+.tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 20px;
+
+    max-width: 1150px;
+    margin-top: 60px;
+    &.hidden{
+        display: none;
+    }
+}
+
+.tags-link {
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    padding: 10px;
+
+    background-color: #F5F5F5;;
+    border-radius: 50px;
+
+    transition: transform 0.1s cubic-bezier(0.4, 0, 1, 1);
+    &:hover{
+        transform: scale(1.05);
+        background-color: #D3E2E2;;
+    }
+}
+
+@media screen and (max-width: $burgerBreakpoint){
+    .login-btn--tags-page{
+        top: 55px !important;
+        right: 19px !important;
+    }
+}
+
+// Tags menu
+
+.recent-posts--hidden{
+    display: none;
+    &.visible{
+        display: flex;
+    }
+}

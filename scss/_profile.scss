@@ -1,0 +1,130 @@
+// Profile info section
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 75px;
+
+    margin-top: 75px;
+}
+.user-info__avatar{
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.user-info__content {
+    max-width: 440px;
+}
+
+.user-info__title {
+    line-height: 1;
+    font-size: 42px;
+    color: #1C1C1C;
+}
+
+.user-info__nickname {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    color: rgba(28, 28, 28, 0.5);
+}
+
+.user-info__social{
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-info__link{
+    color: black;
+    &:hover{
+        text-decoration: underline;
+    }
+    &::before{
+        content: "";
+        display: inline-block;
+        vertical-align: text-bottom;
+        width: 25px;
+        height: 25px;
+
+        background-image: url(./../img/profile/social/link1.svg);
+        background-repeat: no-repeat;
+        background-size: initial;
+    }
+}
+.user-info__social-image{
+    transition: all 0.1s ease-in;
+    &:hover{
+        transform: translateY(-2px);
+    }
+
+}
+
+@media screen and(max-width: $breakpoint768) {
+    .user-info {
+        gap: 25px;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .user-info__title{
+        font-size: 30px;
+    }
+    .user-info__text{
+        text-align: left;
+    }
+}
+
+// Featured article section
+
+.article-preview--profile{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 500px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-image: url(./../img/profile/featured-article.jpg);
+}
+.article-preview--profile * + *{
+    margin-top: 0;
+}
+.article-content--profile{
+    position: relative;
+    padding: 40px 30px;
+    max-width: 400px;
+    right: 30px;
+    left: auto;
+
+    .article-text{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: $breakpoint768) {
+    .article-content--profile{
+        position: static;
+    }
+}
+@media screen and (max-width: $breakpoint480) {
+    .article-content--profile{
+        &:hover{
+            background-color: #b1b1b194;
+        }
+    }
+}
+
+// Recent posts section
+
+.recent-posts--profile{
+    margin-top: 50px;
+    max-width: 815px;
+    gap: 0;
+}
+
+

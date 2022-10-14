@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="main__body">
+
+
+    <!-- Header -->
+    <header>
+
+        <!-- Navbar -->
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+
+                    <!-- Left section -->
+                    <div class="navbar">
+                        <div class="logo"> <a href="./index.html" title="Home page"> <img src="./img/header-logo.svg" alt="Nuntium"> </a> </div>
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a href="./index.html" class="menu__item-link" data-scroll>Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#!" class="menu__item-link menu__item-link--active" data-scroll>Tags</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./about.html" class="menu__item-link" data-scroll>About</a>
+                            </li>
+                            <li class="menu__item menu__item--hidden">
+                                <button class="login-btn modal__btn--second login-btn--tags-page" type="button">
+                                    <img src="./img/login.svg" alt="">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="login-btn modal__btn" type="button">Login</button>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Modal login-->
+        <div class="modal__wrapper">
+
+            <div class="container">
+
+                <div class="modal">
+
+                    <div class="modal__close">
+                        <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px">
+                    </div>
+                    <h2 class="modal__title">Welcome back!</h2>
+                    <p class="modal__subtitle">Sign in to get the most out of nuntium.</p>
+
+                    <div class="modal__body">
+                        <form class="modal-form" onsubmit="return validateForm()" action="home-logged.html">
+                            <div class="form-container">
+
+                                <input class="username" type="text" placeholder="Username" name="uname">
+                                <div class="tooltip-box">
+                                    <span class="tooltip tooltip--user">min length</span>
+                                </div>
+
+                                <input class="password" type="password" placeholder="Password" name="psw">
+                                <div class="tooltip-box">
+                                    <span class="tooltip tooltip--pass">3 symbols</span>
+                                </div>
+                                <div class="user-wapper">
+
+                                    <label>
+                                        <input class="checkbox" type="checkbox" name="remember">
+                                        Remember me
+                                    </label>
+
+                                    <span class="forgot-pass"><a href="#!">Forgot Password?</a></span>
+
+                                </div>
+                                <button class="login-btn--modal" type="submit">Login</button>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <button class="screenlock-btn" type="button">See screenlock page</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenlock login-->
+        <div class="modal__wrapper--screenlock">
+            <div class="container">
+                <div class="modal--screenlock">
+                    <div class="modal__close--screenlock">
+                        <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px">
+                    </div>
+                    <div class="modal-img">
+                        <img src="./img/modal/profile-picture.svg" alt="">
+                    </div>
+
+                    <div class="modal__body">
+                        <form class="modal-form" onsubmit="return validateFormScreenlock()" action="home-logged.html">
+                            <div class="form-container">
+                                <input class="password password--screenlock" type="password" placeholder="Password"
+                                    name="psw">
+                                <div class="tooltip-box">
+                                    <span class="tooltip tooltip--pass tooltip--screenlock">length 3 symbols</span>
+                                </div>
+
+                                <div class="user-wapper">
+
+                                    <label>
+                                        <input class="checkbox" type="checkbox" name="remember">
+                                        Remember me
+                                    </label>
+
+                                    <span class="forgot-pass forgot-pass--screenlock"><a href="#!">Forgot
+                                            Password?</a></span>
+                                </div>
+                                <button class="login-btn--modal" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Main Page -->
+    <main>
+        <div class="container">
+
+            <div class="tags-section">
+
+                <form class="tags-form">
+                    <input class="tags-input" placeholder="Find the topics you care about..." type="text" name='tags'
+                        value='#technology' autofocus>
+
+                    <button class="tags-btn" type="button">
+                        <img src="./img/header-search.svg" alt="">
+                    </button>
+                </form>
+
+                <div class="tags-cloud">
+                    <a class="tags-link" title="search by..." href="#!">#technology</a>
+                    <a class="tags-link" title="search by..." href="#!">#lifeandlove</a>
+                    <a class="tags-link" title="search by..." href="#!">#essentialism</a>
+                    <a class="tags-link" title="search by..." href="#!">#webdevelopment</a>
+                    <a class="tags-link" title="search by..." href="#!">#fashion</a>
+                    <a class="tags-link" title="search by..." href="#!">#lifestyle</a>
+                    <a class="tags-link" title="search by..." href="#!">#architecture</a>
+                    <a class="tags-link" title="search by..." href="#!">#sports</a>
+                    <a class="tags-link" title="search by..." href="#!">#entertainment</a>
+                    <a class="tags-link" title="search by..." href="#!">#culinaryarts</a>
+                    <a class="tags-link" title="search by..." href="#!">#travel</a>
+                    <a class="tags-link" title="search by..." href="#!">#worldhistory</a>
+                    <a class="tags-link" title="search by..." href="#!">#aeronautics</a>
+                    <a class="tags-link" title="search by..." href="#!">#games</a>
+                    <a class="tags-link" title="search by..." href="#!">#minimalism</a>
+                    <a class="tags-link" title="search by..." href="#!">#finearts</a>
+                    <a class="tags-link" title="search by..." href="#!">#graphicdesign</a>
+                    <a class="tags-link" title="search by..." href="#!">#filmmaking</a>
+                    <a class="tags-link" title="search by..." href="#!">#bitcoin</a>
+                    <a class="tags-link" title="search by..." href="#!">#computers</a>
+                    <a class="tags-link" title="search by..." href="#!">#machinelearning</a>
+                </div>
+
+                <section class="recent-posts recent-posts--hidden">
+                    <div class="preview">
+
+                        <!-- Item -->
+                        <div class="preview__item">
+                            <a class="preview__image" href="./article.html">
+                                <img src="./img/tags/article-img1.png" alt="">
+                            </a>
+                            <div class="preview__content">
+                                <a class="preview__link" href="./article.html">
+                                    <h2 class="preview__title">Adipisicing Laris Cupidatat do</h2>
+                                </a>
+                                <div class="tag-container">
+                                    <a class="author" href="#!to-author">Lee Russell</a>
+                                    <a class="date" href="#!to-date-filter">November 3, 2012</a>
+                                </div>
+                                <p class="preview__text">
+                                    Irure veniam ex do aliqua esse irure voluptate ipsum labore nisi ullamco consequat
+                                    ex adipisicing mollit aliqua elit ipsum sit labore elit Lorem laborum qui pariatur
+                                    cillum irure cillum qui excepteur ex commodo labore sunt labore dolor culpa aliquip
+                                    veniam
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="preview__item">
+                            <a class="preview__image" href="./article.html">
+                                <img src="./img/tags/article-img2.png" alt="">
+                            </a>
+                            <div class="preview__content">
+                                <a class="preview__link" href="./article.html">
+                                    <h2 class="preview__title">Sunt ea Aute Anim</h2>
+                                </a>
+                                <div class="tag-container">
+                                    <a class="author" href="#!to-author">Victoria Watson</a>
+                                    <a class="date" href="#!to-date-filter">March 2, 2014</a>
+                                </div>
+                                <p class="preview__text">
+                                    Mollit ad ad exercitation sunt sunt in aliquip deserunt exercitation officia cillum
+                                    sunt dolore mollit duis commodo aliquip commodo Lorem minim nostrud in deserunt
+                                    occaecat reprehenderit cillum laboris nostrud ut irure id in enim et nisi aute ex
+                                    esse velit
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="preview__item">
+                            <a class="preview__image" href="./article.html">
+                                <img src="./img/tags/article-img3.png" alt="">
+                            </a>
+                            <div class="preview__content">
+                                <a class="preview__link" href="./article.html">
+                                    <h2 class="preview__title">Consectetur esse Exercitation</h2>
+                                </a>
+                                <div class="tag-container">
+                                    <a class="author" href="#!to-author">Ronald Hawkins</a>
+                                    <a class="date" href="#!to-date-filter">December 25, 2019</a>
+                                </div>
+                                <p class="preview__text">
+                                    Laboris ipsum aute reprehenderit cillum duis mollit est id in anim ea irure
+                                    incididunt cillum deserunt occaecat do duis enim aliquip tempor officia est
+                                    adipisicing qui id sint aliquip sunt ullamco excepteur incididunt labore amet
+                                    laborum et dolore anim esse
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="preview__item">
+                            <a class="preview__image" href="./article.html">
+                                <img src="./img/tags/article-img4.png" alt="">
+                            </a>
+                            <div class="preview__content">
+                                <a class="preview__link" href="./article.html">
+                                    <h2 class="preview__title">Occaecat Quis Adipisicing</h2>
+                                </a>
+                                <div class="tag-container">
+                                    <a class="author" href="#!to-author">Mitchell Bell</a>
+                                    <a class="date" href="#!to-date-filter">August 29, 2016</a>
+                                </div>
+                                <p class="preview__text">
+                                    Amet minim quis irure esse occaecat exercitation eu reprehenderit consequat veniam
+                                    quis irure et tempor ut qui veniam fugiat reprehenderit non do exercitation dolor ex
+                                    amet nulla aliqua exercitation consectetur occaecat ea adipisicing Lorem aute.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+            </div>
+
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <h2 class="footer-title">Want to connect?</h2>
+                <p class="footer-text">Laboris consectetur sunt nulla eiusmod voluptate eiusmod dolor nisi qui..</p>
+                <div class="footer-social">
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/twitter.svg" alt="twitter">
+                    </a>
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/inst.svg" alt="instagram">
+                    </a>
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/in.svg" alt="linkedin">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify"></script>
+<script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
+<script src="./js/tags.js"></script>
+<script src="./js/main.js"></script>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="main__body">
+
+
+    <!-- Header -->
+    <header>
+
+        <!-- Navbar -->
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+
+                    <!-- Left section -->
+                    <div class="navbar">
+                        <div class="logo"> <a href="#!"> <img src="./img/header-logo.svg" alt="Nuntium"> </a> </div>
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a href="#!" class="menu__item-link menu__item-link--active" data-scroll>Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#!" class="menu__item-link" data-scroll>Tags</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#!" class="menu__item-link" data-scroll>About</a>
+                            </li>
+                            <li class="menu__item menu__item--hidden">
+                                <form class="nav-form">
+                                    <input type="text" placeholder="Search">
+                                    <button type="submit">
+                                        <img src="./img/header-search.svg" alt="">
+                                    </button>
+                                </form>
+                                <button class="login-btn modal__btn--second" type="button">
+                                    <img src="./img/login.svg" alt="">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right section -->
+                    <form class="nav-form">
+                        <input type="text" placeholder="Search">
+                        <button type="submit">
+                            <img src="./img/header-search.svg" alt="">
+                        </button>
+                    </form>
+                    <button class="login-btn modal__btn" type="button">Login</button>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Modal login-->
+        <div class="modal__wrapper">
+
+            <div class="container">
+
+                <div class="modal">
+
+                    <div class="modal__close">
+                        <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px">
+                    </div>
+                    <h2 class="modal__title">Welcome back!</h2>
+                    <p class="modal__subtitle">Sign in to get the most out of nuntium.</p>
+
+                    <div class="modal__body">
+                        <form class="modal-form" onsubmit="return validateForm()" action="home-logged.html">
+                            <div class="form-container">
+
+                                <input class="username" type="text" placeholder="Username" name="uname">
+                                <div class="tooltip-box">
+                                    <span class="tooltip tooltip--user">min length 3</span>
+                                </div>
+
+                                <input class="password" type="password" placeholder="Password" name="psw">
+                                <div class="tooltip-box">
+                                    <span class="tooltip tooltip--pass">length 3 symbols</span>
+                                </div>
+                                <div class="user-wapper">
+
+                                    <label>
+                                        <input class="checkbox" type="checkbox" name="remember">
+                                        Remember me
+                                    </label>
+
+                                    <span class="forgot-pass"><a href="#!">Forgot Password?</a></span>
+
+                                </div>
+                                <button class="login-btn--modal" type="submit">Login</button>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <button class="screenlock-btn" type="button">See screenlock page</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenlock login-->
+        <div class="modal__wrapper--screenlock">
+            <div class="container">
+                <div class="modal--screenlock">
+                    <div class="modal__close--screenlock">
+                        <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px">
+                    </div>
+                    <div class="modal-img">
+                        <img src="./img/modal/profile-picture.svg" alt="">
+                    </div>
+
+                    <div class="modal__body">
+                        <form class="modal-form" onsubmit="return validateFormScreenlock()" action="home-logged.html">
+                            <div class="form-container">
+                                <input class="password password--screenlock" type="password" placeholder="Password"
+                                    name="psw">
+                                <div class="tooltip-box">
+                                    <span class="tooltip tooltip--pass tooltip--screenlock">length 3 symbols</span>
+                                </div>
+
+                                <div class="user-wapper">
+
+                                    <label>
+                                        <input class="checkbox" type="checkbox" name="remember">
+                                        Remember me
+                                    </label>
+
+                                    <span class="forgot-pass forgot-pass--screenlock"><a href="#!">Forgot
+                                            Password?</a></span>
+                                </div>
+                                <button class="login-btn--modal" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Main Page -->
+    <main>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <h2 class="footer-title">Want to connect?</h2>
+                <p class="footer-text">Laboris consectetur sunt nulla eiusmod voluptate eiusmod dolor nisi qui..</p>
+                <div class="footer-social">
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/twitter.svg" alt="twitter">
+                    </a>
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/inst.svg" alt="instagram">
+                    </a>
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/in.svg" alt="linkedin">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+<script src="./js/main.js"></script>
+
+</html>

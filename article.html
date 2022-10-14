@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="main__body">
+
+
+    <!-- Header -->
+    <header>
+
+        <!-- Navbar -->
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+
+                    <!-- Left section -->
+                    <div class="navbar">
+                        <div class="logo"> <a href="./index.html" title="Home page"> <img src="./img/header-logo.svg" alt="Nuntium"> </a> </div>
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a href="./index.html" class="menu__item-link" data-scroll>Home</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./tags.html" class="menu__item-link" data-scroll>Tags</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./about.html" class="menu__item-link" data-scroll>About</a>
+                            </li>
+                            <li class="menu__item menu__item--hidden">
+                                <form class="nav-form">
+                                    <input type="text" placeholder="Search">
+                                    <button type="submit">
+                                        <img src="./img/header-search.svg" alt="">
+                                    </button>
+                                </form>
+                                <button class="login-btn modal__btn--second" type="button">
+                                    <img src="./img/login.svg" alt="">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right section -->
+                    <form class="nav-form">
+                        <input type="text" placeholder="Search">
+                        <button type="submit">
+                            <img src="./img/header-search.svg" alt="">
+                        </button>
+                    </form>
+                    <button class="login-btn modal__btn" type="button">Login</button>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Modal login-->
+        <div class="modal__wrapper">
+
+            <div class="container">
+
+                <div class="modal">
+
+                    <div class="modal__close">
+                        <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px">
+                    </div>
+                    <h2 class="modal__title">Welcome back!</h2>
+                    <p class="modal__subtitle">Sign in to get the most out of nuntium.</p>
+
+                    <div class="modal__body">
+                        <form class="modal-form" onsubmit="return validateForm()" action="home-logged.html">
+                            <div class="form-container">
+
+                                <input class="username" type="text" placeholder="Username" name="uname">
+                                <div class="tooltip-box">
+                                    <span class="tooltip tooltip--user">min length 3</span>
+                                </div>
+
+                                <input class="password" type="password" placeholder="Password" name="psw">
+                                <div class="tooltip-box">
+                                    <span class="tooltip tooltip--pass">length 3 symbols</span>
+                                </div>
+                                <div class="user-wapper">
+
+                                    <label>
+                                        <input class="checkbox" type="checkbox" name="remember">
+                                        Remember me
+                                    </label>
+
+                                    <span class="forgot-pass"><a href="#!">Forgot Password?</a></span>
+
+                                </div>
+                                <button class="login-btn--modal" type="submit">Login</button>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <button class="screenlock-btn" type="button">See screenlock page</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenlock login-->
+        <div class="modal__wrapper--screenlock">
+            <div class="container">
+                <div class="modal--screenlock">
+                    <div class="modal__close--screenlock">
+                        <img src="./img/cancel.svg" alt="cancel" width="10px" height="10px">
+                    </div>
+                    <div class="modal-img">
+                        <img src="./img/modal/profile-picture.svg" alt="">
+                    </div>
+
+                    <div class="modal__body">
+                        <form class="modal-form" onsubmit="return validateFormScreenlock()" action="home-logged.html">
+                            <div class="form-container">
+                                <input class="password password--screenlock" type="password" placeholder="Password"
+                                    name="psw">
+                                <div class="tooltip-box">
+                                    <span class="tooltip tooltip--pass tooltip--screenlock">length 3 symbols</span>
+                                </div>
+
+                                <div class="user-wapper">
+
+                                    <label>
+                                        <input class="checkbox" type="checkbox" name="remember">
+                                        Remember me
+                                    </label>
+
+                                    <span class="forgot-pass forgot-pass--screenlock"><a href="#!">Forgot
+                                            Password?</a></span>
+                                </div>
+                                <button class="login-btn--modal" type="submit">Login</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- Main Page -->
+    <main>
+        <div class="container">
+            <section class="article">
+
+                <div class="article-image">
+                    <img src="./img/article-Image.jpg" alt="The Worlds Most Dangerous Technology Ever Made">
+                </div>
+
+                <div class="article-main">
+
+                    <div class="article-head">
+                        <h1 class="article-heading">The Worlds Most Dangerous Technology Ever Made.</h1>
+                        <div class="tag-container tag-container--article">
+                            <a class="author" href="#!">Arthur Black</a>
+                            <a class="date" href="#!">May 7, 2019 (10 mins read)</a>
+                        </div>
+                        <div class="tags">
+                            <a class="tag" href="#!">#technology</a>
+                            <a class="tag" href="#!">#tech</a>
+                            <a class="tag" href="#!">#career</a>
+                        </div>
+                    </div>
+
+                    <div class="article-body">
+                        <p class="article-paragraph">
+                            Commodo labore ut nisi laborum amet eu qui magna ullamco ut labore. Aliquip
+                            consectetur labore consectetur dolor exercitation est minim quis. Magna non irure qui ex est
+                            laborum nulla excepteur qui. Anim Lorem dolore cupidatat pariatur ex tempor. Duis ea
+                            excepteur
+                            proident ex commodo irure est.
+                        </p>
+                        <p class="article-paragraph">
+                            Nisi commodo qui pariatur enim sint laborum consequat enim in officia.
+                            Officia fugiat incididunt commodo et mollit aliqua non aute. Enim dolor eiusmod aliqua amet
+                            ipsum in enim eiusmod. Quis exercitation sit velit duis.
+                        </p>
+                        <p class="article-paragraph">
+                            Est Lorem labore consectetur minim sit eu eiusmod mollit velit. Consectetur
+                            voluptate ex amet id eiusmod laborum irure. Aliquip ad qui id exercitation irure amet
+                            commodo
+                            nisi quis. Occaecat minim incididunt eiusmod nostrud veniam quis culpa.
+                            Nisi ipsum et consequat id deserunt excepteur. Cillum non pariatur culpa ut occaecat laboris
+                            eu.
+                            Ullamco ad Lorem et elit laboris eu qui irure nulla qui culpa et. Cupidatat sunt ipsum
+                            proident
+                            aute exercitation do tempor aliqua cupidatat quis non exercitation. Adipisicing do minim
+                            dolore
+                            nulla mollit. Adipisicing incididunt irure ipsum et in esse ipsum elit tempor.
+                        </p>
+                        <p class="article-paragraph">
+                            Aliquip mollit sunt qui irure. Irure ullamco Lorem excepteur dolor qui ea ad
+                            quis. Enim fugiat cillum enim ad occaecat sint qui elit labore mollit sunt laborum fugiat
+                            consequat. Voluptate labore sunt duis eu deserunt. Occaecat do ut ut labore cillum enim
+                            dolore
+                            ad enim enim id. Aliquip do veniam ad excepteur ad cillum qui deserunt nostrud sunt aliqua
+                            duis
+                            sunt occaecat. Laborum incididunt commodo ullamco proident quis.
+                        </p>
+                    </div>
+
+                    <div class="article-author">
+                        <span class="article-author__about">ABOUT THE AUTHOR</span>
+                        <div class="author-wrapper">
+                            <img class="article-author__avatar" src="./img/profile/profile-avatar.png"
+                                alt="Author picture">
+                            <div class="article-author__info">
+                                <h1 class="article-author__title">Arthur Black</h1>
+                                <span class="article-author__nickname">@arthurblack</span>
+                                <p class="article-author__text">
+                                    Ipsum adipisicing culpa est nisi consequat ex amet magna culpa veniam
+                                    tempor irure ea. Reprehenderit labore do tempor eiusmod in consectetur ex sunt id
+                                    mollit commodo
+                                    ipsum deserunt quis.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="pagination">
+                    <ul class="pagination-list">
+                        <li class="pagination-item">
+                            <a href="#!" class="pagination-link pagination-link--perv" title="Boom boom pow is et Letstrade">
+                                <img src="./img/back-btn.svg" alt="">
+                                Boom boom pow is et Letstrade.
+                            </a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#!" class="pagination-link pagination-link--next" title="Lorem ipsum so Ceat Riak">
+                                Lorem ipsum so Ceat Riak
+                                <img src="./img/next-btn.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <h2 class="footer-title">Want to connect?</h2>
+                <p class="footer-text">Laboris consectetur sunt nulla eiusmod voluptate eiusmod dolor nisi qui..</p>
+                <div class="footer-social">
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/twitter.svg" alt="twitter">
+                    </a>
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/inst.svg" alt="instagram">
+                    </a>
+                    <a class="footer-social__item" href="#!">
+                        <img src="./img/footer/in.svg" alt="linkedin">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+<script src="./js/main.js"></script>
+
+</html>

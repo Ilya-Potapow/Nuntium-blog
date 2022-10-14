@@ -1,0 +1,235 @@
+// Nav right section
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+
+// User dropdawn menu
+
+.dropdawn-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    padding: 20px 0;
+
+    background: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.dropdawn-menu--user {
+    top: 70px;
+    right: 0px;
+    left: -115px;
+    max-width: 175px;
+
+    .dropdawn-link {
+        transition: all 0.1s ease-in;
+        border-radius: 5px;
+
+        &:hover {
+            color: black;
+            background-color: #bfbfbf87
+        }
+    }
+}
+
+.dropdawn-item {
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 19px;
+    color: rgba(28, 28, 28, 0.8);
+
+}
+
+.usermenu-item,
+.notification-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdawn-item--user {
+    margin-bottom: 15px;
+    padding-bottom: 7.5px;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.1);
+}
+
+.user-avatar {
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        transform: scale(.9);
+    }
+}
+
+.dropdawn-item+.dropdawn-item {
+    margin-top: 5px;
+}
+
+.dropdawn-link {
+    padding: 0 5px;
+    font-size: 16px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #555555;
+
+}
+
+.dropdawn-link--username {
+    font-weight: 700;
+}
+
+.menu__item--hidden {
+    .usermenu-drop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $burgerBreakpoint) {
+
+    .usermenu-drop {
+        display: none;
+    }
+
+    .menu__item--hidden {
+        .usermenu-drop {
+            display: block;
+            position: absolute;
+            top: 100px;
+            right: 17px;
+
+        }
+        .dropdawn-menu--user{
+            top: 40px;
+            right: -2px;
+            left: auto;
+
+            padding: 5px;
+            background-color: white;
+        }
+        .dropdawn-item{
+            padding: 0;
+        }
+        .dropdawn-item + .dropdawn-item{
+            margin-top: 10px;
+        }
+        .dropdawn-link{
+            padding: 0;
+            &:hover{
+                background: none;
+            }
+            img{
+                animation: none;
+                &:hover{
+                    animation: shake 1s;
+                    animation-iteration-count: infinite;
+                    
+                }
+            }
+        }
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+          }
+
+}
+
+    .user-avatar {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+//   Notifocation dropdawn menu
+
+.dropdawn-menu--notification {
+    max-width: none;
+    top: -10px;
+    left: -205px;
+    padding: 10px 0;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        background-color: #aaf1c8;
+        box-shadow: none;
+    }
+
+    .dropdawn-item {
+        line-height: 30px;
+    }
+
+}
+
+.btn__badge {
+    background: #FF5D5D;
+    position: absolute;
+    top: -2px;
+    right: 3px;
+    padding: 5px 5px;
+    border-radius: 50%;
+}
+
+.pulse-button {
+    -webkit-animation: none
+}
+
+.notification-drop:hover {
+    .pulse-button {
+        -webkit-animation: pulse 1.5s infinite;
+    }
+}
+
+@-webkit-keyframes pulse {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-0.5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(0.5px);
+    }
+}
+
+.dropdawn-image {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: $burgerBreakpoint) {
+    .notification-drop {
+        position: absolute;
+        top: 45px;
+        right: 60px;
+    }
+}

@@ -1,0 +1,16 @@
+// Container & Breakpoints
+@use "sass:math";
+$containerWidth: 1346;
+$breakpoint1400: 1339.98+px;
+$breakpoint992: 991.98+px;
+$breakpoint768: 767.98+px;
+$breakpoint480: 479.98+px;
+
+// Burger Menu 
+$burgerBreakpoint: 919px;
+$burgerActiveColor: 'white';
+
+// Fonts
+$fontMain: 'Open Sans', sans-serif;
+$fontSecondary: 'Libre Baskerville', serif;
+

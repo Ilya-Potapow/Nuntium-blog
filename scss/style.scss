@@ -1,0 +1,23 @@
+// Global SCSS imports
+@import './vars';
+@import './reset';
+@import './global';
+@import './fonts';
+
+
+// Pages SCSS files imports
+@import './page-home';
+@import './profile';
+@import './dashboard';
+@import './home-logged';
+@import './tags';
+@import './about';
+@import './article';
+
+
+
+
+
+// Libs 
+// @import './libs/swiper';
+
